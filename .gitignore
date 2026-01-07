@@ -1,0 +1,26 @@
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Fichiers de configuration locaux
+.env
+.env.local
+.env.*.local
+
+# Dossiers de dépendances
+/vendor/
+
+# Fichiers de logs
+*.log
+/logs/
+
+# Fichiers temporaires
+/tmp/
+/cache/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~

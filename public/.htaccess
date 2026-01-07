@@ -1,0 +1,18 @@
+# Réécriture d'URL - Toutes les requêtes vers index.php
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    
+    # Si le fichier ou le dossier existe, l'utiliser directement
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    
+    # Sinon, rediriger vers index.php
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>
+
+# Sécurité - Empêcher l'accès aux fichiers sensibles
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
